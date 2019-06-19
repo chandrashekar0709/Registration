@@ -1,0 +1,75 @@
+﻿@model List<RegistrationForm.EntityFramework.Sp_GetUser_Result>
+
+@{
+    ViewBag.Title = "Register";
+}
+<h2>Data</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            PhoneNumber
+        </th>
+        <th>
+            DateOfBirth
+        </th>
+        <th>
+            Username
+        </th>
+        <th>
+            Password
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            CreatedDate
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(m => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(m => item.CreatedDate)
+            </td>
+        </tr>
+    }
+
+</table>
+
+
